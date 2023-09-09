@@ -21,6 +21,6 @@ class TodoListController extends Controller
         $newListItem->is_complete = 0;
         $newListItem->save();
 
-        return view('welcome', ['listItems' => ListItem::all()]);
+        return redirect('/');
     }
 }
