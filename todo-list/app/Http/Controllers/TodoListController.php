@@ -23,4 +23,14 @@ class TodoListController extends Controller
 
         return redirect('/');
     }
+
+    public function markComplete($id)
+    {
+        \Log::info($id);
+        $listItem = ListItem::find($id);
+        $listItem->is_complete += 1;
+        $listItem->save();
+
+        return redirect('/');
+    }
 }

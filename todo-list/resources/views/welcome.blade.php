@@ -8,7 +8,7 @@
     /* Create two equal columns that floats next to each other */
     .column {
         float: left;
-        width: 20%;
+        width: 30%;
         padding: 10px;
         height: 300px; /* Should be removed. Only for demonstration */
     }
@@ -34,7 +34,14 @@
     <div class="row">
         <div class="column">
             @foreach($listItems as $listItem)
-                <p>Item:{{ $listItem -> name }}</p>
+                <div class="flex" style="align-items: center;">
+                    <p>Item:{{ $listItem -> name }}</p>
+                    <form method="post" action="{{ route('markComplete', $listItem->id) }}" accept-charset="UTF-8">
+                        {{ csrf_field() }}
+                        <button type="submit" style="max-height: 25px;margin-left: 20px;">Mark complete</button>
+                    </form>
+                </div>
+
             @endforeach
         </div>
         <div class="column">
