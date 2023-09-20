@@ -20,13 +20,11 @@
         clear: both;
     }
 </style>
-<link rel="stylesheet" href="../css/app.css">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Todo app</title>
-
 </head>
 <body class="antialiased">
 <div>
@@ -43,7 +41,6 @@
                         <button type="submit" style="max-height: 25px;margin-left: 20px;">Mark complete</button>
                     </form>
                 </div>
-
             @endforeach
         </div>
         <div class="column">
