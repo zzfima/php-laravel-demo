@@ -33,9 +33,11 @@
     <h1> TODO list </h1>
     <div class="row">
         <div class="column">
-            @foreach($listItems as $listItem)
+            <h3> Uncompleted Items </h3>
+            @foreach($uncompletedlistItems as $listItem)
                 <div class="flex" style="align-items: center;">
-                    <p>Item:{{ $listItem -> name }}</p>
+                    <p>Item: {{ $listItem -> name }}</p>
+                    <!-- form $listItem->id passed as $id -->
                     <form method="post" action="{{ route('markComplete', $listItem->id) }}" accept-charset="UTF-8">
                         {{ csrf_field() }} <!-- security purposes -->
                         <button type="submit" style="max-height: 25px;margin-left: 20px;">Mark complete</button>
@@ -45,9 +47,18 @@
             @endforeach
         </div>
         <div class="column">
+            <h3> Completed Items </h3>
+            @foreach($completedlistItems as $listItem)
+                <div class="flex" style="align-items: center;">
+                    <p>Item: {{ $listItem -> name }}</p>
+                </div>
+            @endforeach
+        </div>
+        <div class="column">
+            <h3> New todo item </h3>
+            <!-- all form passed as Request $request -->
             <form method="post" action="{{ route('saveItem') }}" accept-charset="UTF-8">
                 {{ csrf_field() }} <!-- security purposes -->
-                <label for="listItem">New todo item</label>
                 <label>
                     <input type="text" name="listItem">
                 </label>

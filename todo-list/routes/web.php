@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\TodoListController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\todoListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +14,6 @@ use App\Http\Controllers\todoListController;
 |
 */
 
-Route::get('/', [todoListController::class, 'index']);
-Route::post('/saveItemRoute', [todoListController::class, 'saveItem'])->name('saveItem');
-Route::post('/markCompleteRoute/{id}', [todoListController::class, 'markComplete'])->name('markComplete');
+Route::get('/', [TodoListController::class, 'index']);
+Route::post('/saveItemRoute', [TodoListController::class, 'saveItem'])->name('saveItem');
+Route::post('/markCompleteRoute/{id}', [TodoListController::class, 'markComplete'])->name('markComplete');

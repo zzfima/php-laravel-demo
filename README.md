@@ -31,12 +31,13 @@ Use cases:
          2. _$table->integer('is_complete');_
    4. Make migration again: _php artisan migrate_
       1. Make sure it is added to db
-7. Starting the server: _php artisan serve_
-8. Open http://127.0.0.1:8000/
-9. Changed files:
-   1. Rename welcome.blade.php to mainPage.blade.php. 
-   2. resources/views/mainPage.blade.php 
-   3. Http/Controllers/TodoListController.php
-   4. .env
-   5. database/migrations/2023_09_09_122035_create_list_items_table.php
-   6. routes/web.php
+7. Creating controller for free from logic file web.php: _php artisan make:controller TodoListController_
+8. Starting the server: _php artisan serve_
+9. Open http://127.0.0.1:8000/
+10. Changed files:
+    1. Rename welcome.blade.php to mainPage.blade.php. 
+    2. resources/views/mainPage.blade.php 
+    3. Http/Controllers/TodoListController.php
+    4. .env
+    5. database/migrations/2023_09_09_122035_create_list_items_table.php
+    6. routes/web.php
