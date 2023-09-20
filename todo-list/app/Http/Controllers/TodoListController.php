@@ -14,8 +14,8 @@ class TodoListController extends Controller
     public function index(): View
     {
         return view('mainPage',
-            ['uncompletedlistItems' => ListItem::where('is_complete', 0)->get()],
-            ['completedlistItems' => ListItem::where('is_complete', 1)->get()],
+            ['uncompletedTodoItems' => ListItem::where('is_complete', 0)->get()],
+            ['completedTodoItems' => ListItem::where('is_complete', 1)->get()],
         );
     }
 

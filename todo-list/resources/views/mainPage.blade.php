@@ -32,7 +32,7 @@
     <div class="row">
         <div class="column">
             <h3> Uncompleted Items </h3>
-            @foreach($uncompletedlistItems as $listItem)
+            @foreach($uncompletedTodoItems as $listItem)
                 <div class="flex" style="align-items: center;">
                     <p>Item: {{ $listItem -> name }}</p>
                     <!-- form $listItem->id passed as $id -->
@@ -45,7 +45,7 @@
         </div>
         <div class="column">
             <h3> Completed Items </h3>
-            @foreach($completedlistItems as $listItem)
+            @foreach($completedTodoItems as $listItem)
                 <div class="flex" style="align-items: center;">
                     <p>Item: {{ $listItem -> name }}</p>
                 </div>
