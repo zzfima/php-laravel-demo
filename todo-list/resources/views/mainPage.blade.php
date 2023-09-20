@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <style>
     * {
         box-sizing: border-box;
@@ -37,7 +37,7 @@
                 <div class="flex" style="align-items: center;">
                     <p>Item:{{ $listItem -> name }}</p>
                     <form method="post" action="{{ route('markComplete', $listItem->id) }}" accept-charset="UTF-8">
-                        {{ csrf_field() }}
+                        {{ csrf_field() }} <!-- security purposes -->
                         <button type="submit" style="max-height: 25px;margin-left: 20px;">Mark complete</button>
                     </form>
                 </div>
@@ -46,9 +46,11 @@
         </div>
         <div class="column">
             <form method="post" action="{{ route('saveItem') }}" accept-charset="UTF-8">
-                {{ csrf_field() }}
+                {{ csrf_field() }} <!-- security purposes -->
                 <label for="listItem">New todo item</label>
-                <input type="text" name="listItem">
+                <label>
+                    <input type="text" name="listItem">
+                </label>
                 <br>
                 <button>Add</button>
             </form>
