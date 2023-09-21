@@ -21,7 +21,7 @@ Use cases:
    1. DB_DATABASE=todoList
    2. DB_USERNAME=root
    3. DB_PASSWORD=1234
-6. Making model ListItem and Create migration
+6. Making model ListItem,  Create migration
    1. Create model: _php artisan make:model ListItem -m_
    2. Make migration: _php artisan migrate_
    3. Check the migration folder: _database/migrations
@@ -33,6 +33,7 @@ Use cases:
       1. Make sure it is added to db
    5. Make factory for seeders: _php artisan make:factory ListItem_
    6. Refresh migration: _php artisan migrate:fresh_
+   7. Refresh migration includes generate test info (seeds): _php artisan migrate:fresh --seed_
 7. Creating controller for free from logic file web.php: _php artisan make:controller TodoListController_
 8. Starting the server: _php artisan serve_
 9. Open http://127.0.0.1:8000/
