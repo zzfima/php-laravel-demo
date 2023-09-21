@@ -1,11 +1,12 @@
 # Todo list project
 ### Based on course: https://www.youtube.com/watch?v=AEVhR-hD2Wk
 End product:
-![img.png](img.png)
+![img_2.png](img_2.png)
 Use cases:
 1. as a user, I want to create item for a todo list
 2. as a user, I want to mark items as complete and not to see them
-3. as an admin, I want to see all items in MySQL database
+3. as a user, I want to see completed items
+4. as an admin, I want to see all items in MySQL database
 ### work order:
 1. Install laravel environment: https://laravel.com/docs/4.2
 2. Install MySQL DB: https://dev.mysql.com/downloads/mysql/
