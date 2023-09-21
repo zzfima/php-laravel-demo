@@ -14,8 +14,8 @@ class TodoListController extends Controller
     public function index(): View
     {
         return view('mainPage',
-            ['uncompletedTodoItems' => ListItem::where('is_complete', 0)->get()],
-            ['completedTodoItems' => ListItem::where('is_complete', 1)->get()],
+            ['uncompletedTodoItems' => ListItem::where('completed', false)->get()],
+            ['completedTodoItems' => ListItem::where('completed', true)->get()],
         );
     }
 
@@ -25,7 +25,7 @@ class TodoListController extends Controller
 
         $newListItem = new ListItem;
         $newListItem->name = $request->listItem;
-        $newListItem->is_complete = 0;
+        $newListItem->completed = false;
         $newListItem->save();
 
         return redirect('/');
@@ -35,7 +35,7 @@ class TodoListController extends Controller
     {
         $this->logInfo(' Item id ' . $id . ' is completed');
         $listItem = ListItem::find($id);
-        $listItem->is_complete = 1;
+        $listItem->completed = true;
         $listItem->save();
 
         return redirect('/');

@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static where(string $string, int $int)
  * @method static find($id)
  * @property mixed $name
- * @property int|mixed $is_complete
+ * @property false|mixed $completed
  */
 class ListItem extends Model
 {

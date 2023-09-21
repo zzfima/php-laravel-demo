@@ -31,6 +31,8 @@ Use cases:
          2. _$table->integer('is_complete');_
    4. Make migration again: _php artisan migrate_
       1. Make sure it is added to db
+   5. Make factory for seeders: _php artisan make:factory ListItem_
+   6. Refresh migration: _php artisan migrate:fresh_
 7. Creating controller for free from logic file web.php: _php artisan make:controller TodoListController_
 8. Starting the server: _php artisan serve_
 9. Open http://127.0.0.1:8000/
