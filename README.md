@@ -38,7 +38,8 @@ Use cases:
 7. Creating controller for free from logic file web.php: _php artisan make:controller TodoListController_
 8. Starting the server: _php artisan serve_
 9. Open http://127.0.0.1:8000/
-10. Changed files:
+10. Show routes: _php artisan route:list_
+11. Changed files:
     1. Rename welcome.blade.php to mainPage.blade.php. 
     2. resources/views/mainPage.blade.php 
     3. Http/Controllers/TodoListController.php
