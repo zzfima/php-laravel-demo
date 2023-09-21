@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [TodoListController::class, 'index']);
+Route::get('/', [TodoListController::class, 'mainPage']);
 Route::post('/saveItemRoute', [TodoListController::class, 'saveItem'])->name('saveItem');
 Route::post('/markCompleteRoute/{id}', [TodoListController::class, 'markComplete'])->name('markComplete');

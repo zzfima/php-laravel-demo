@@ -10,8 +10,8 @@ use Illuminate\View\View;
 
 class TodoListController extends Controller
 {
-    //index called from web.php as route and passed 'listItems' to mainPage
-    public function index(): View
+    //mainPage called from web.php as route and passed 'listItems' to mainPage
+    public function mainPage(): View
     {
         return view('mainPage',
             ['uncompletedTodoItems' => ListItem::where('completed', false)->get()],
