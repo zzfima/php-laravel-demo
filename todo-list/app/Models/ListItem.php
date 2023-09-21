@@ -14,4 +14,9 @@ use Illuminate\Database\Eloquent\Model;
 class ListItem extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'completed',
+    ];
 }
