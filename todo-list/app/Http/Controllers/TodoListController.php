@@ -6,19 +6,9 @@ use App\Models\ListItem;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\View\View;
 
 class TodoListController extends Controller
 {
-    //mainPage called from web.php as route and passed 'listItems' to mainPage
-    public function mainPage(): View
-    {
-        return view('mainPage',
-            ['uncompletedTodoItems' => ListItem::where('completed', false)->get()],
-            ['completedTodoItems' => ListItem::where('completed', true)->get()],
-        );
-    }
-
     public function saveItem(Request $request): RedirectResponse
     {
         $this->logInfo(json_encode('Item added: ' . $request->listItem));
